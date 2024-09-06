@@ -1,27 +1,6 @@
-# Guia para NPU en Orange Pi 5 Max del Capítulo 173 en YouTube de Computadoras y Sensores
+# Guia para NPU en Orange Pi 5 Max 
 
-1-Descargar el servidor de video MediaMTX:
-https://github.com/bluenviron/mediamtx
-
-2-Editar mediamtx.yml y agregar al final (despues del all_others):
-
-  cam:
-       runOnInit: ffmpeg -f v4l2 -framerate 24 -video_size 640x640  -i /dev/video0 -vcodec h264 -f rtsp rtsp://localhost:$RTSP_PORT/$MTX_PATH
-       runOnInitRestart: yes
-
-3-En home descargar herramientas de compilación
-sudo apt install gcc cmake git build-essential
-
-4) Clonar toolkit de Github de Rockchip
-git clone https://github.com/rockchip-linux/rknpu2.git
-
-5) Para ejecutar el demo de yolo recién compilado
-./rknn_yolov5_video_demo model/RK3588/yolov5s-640-640.rknn rtsp://127.0.0.1:8554/cam 264
-
-(Recordar que el archivo out.h264 se guarda en el mismo directorio)
-
-6) Para verificar empleo de los núcleos del NPU
-watch sudo cat /sys/kernel/debug/rknpu/load
+Ver archivo guia.txt
 
 # Paso a paso
 https://youtu.be/7xlDtxecdsE
