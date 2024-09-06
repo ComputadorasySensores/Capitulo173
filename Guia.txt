@@ -10,7 +10,7 @@ https://github.com/bluenviron/mediamtx
 3-En home descargar herramientas de compilación
 sudo apt install gcc cmake git build-essential
 
-4) Clonar toolkit de Github de Rockchip
+4) Clonar toolkit en Github de Rockchip
 git clone https://github.com/rockchip-linux/rknpu2.git
 
 5) Para ejecutar el demo de yolo recién compilado
